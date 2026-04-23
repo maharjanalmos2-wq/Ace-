@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-gold: #C5A059;
+  --color-brand-cream: #F5F2ED;
+  --color-brand-muted: #8E8E8E;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-charcoal font-sans antialiased selection:bg-brand-gold/20;
+    background-image: url("https://www.transparenttextures.com/patterns/linen.png");
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.premium-blur {
+  @apply backdrop-blur-md bg-white/70;
+}
+
+.gold-border {
+  @apply border-brand-gold/30 focus:border-brand-gold outline-none transition-colors;
+}
